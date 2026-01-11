@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Income System Intake</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h1>Design Your Income System</h1>
+
+<p>Answer honestly. This decides the system you get.</p>
+
+<form action="result.html" method="GET">
+
+  <label>
+    Your primary skill:
+    <select name="skill">
+      <option value="none">No clear skill</option>
+      <option value="writing">Writing / content</option>
+      <option value="research">Research / analysis</option>
+      <option value="tech">Tech / automation</option>
+      <option value="creative">Creative / design</option>
+    </select>
+  </label>
+
+  <br><br>
+
+  <label>
+    Time you can give per day:
+    <select name="time">
+      <option value="30">30 minutes</option>
+      <option value="60">1 hour</option>
+      <option value="120">2+ hours</option>
+    </select>
+  </label>
+
+  <br><br>
+
+  <label>
+    Risk tolerance:
+    <select name="risk">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+  </label>
+
+  <br><br>
+
+  <label>
+    Prefer anonymity?
+    <select name="anon">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  </label>
+
+  <br><br>
+
+  <button type="submit">Generate Blueprint</button>
+
+</form>
+
+</body>
+</html>
