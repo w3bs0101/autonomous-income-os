@@ -9,15 +9,60 @@
 
 <h1>Your Autonomous Income Blueprint</h1>
 
-<p>This is your preliminary system based on your inputs.</p>
-
-<p><strong>Note:</strong> Full blueprint + automation will unlock soon.</p>
+<div id="output"></div>
 
 <button>Unlock Full System</button>
 
 <p><small>
-Early version. System is evolving.
+This is a preview. Full system includes tools, prompts, and automation.
 </small></p>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  const skill = params.get("skill");
+  const time = params.get("time");
+  const risk = params.get("risk");
+  const anon = params.get("anon");
+
+  let blueprint = "";
+
+  if (skill === "writing" && anon === "yes") {
+    blueprint = `
+      <h3>System: Faceless Niche Content Engine</h3>
+      <p>Create AI-assisted niche content under a pseudonym and monetize via affiliate links.</p>
+      <ul>
+        <li>Platform: Medium / Blogger</li>
+        <li>Content: 2 posts/day (AI-assisted)</li>
+        <li>Monetization: Affiliate + newsletter</li>
+      </ul>
+    `;
+  } 
+  else if (skill === "tech") {
+    blueprint = `
+      <h3>System: Automation Micro-Service</h3>
+      <p>Offer simple automations to businesses using no-code + AI.</p>
+      <ul>
+        <li>Platform: Gumroad + Twitter</li>
+        <li>Service: Scraping, posting, summarizing</li>
+        <li>Monetization: Fixed-price services</li>
+      </ul>
+    `;
+  } 
+  else {
+    blueprint = `
+      <h3>System: AI-Curated Niche Newsletter</h3>
+      <p>Curate and summarize high-value info in a specific niche.</p>
+      <ul>
+        <li>Platform: Substack</li>
+        <li>Content: 1 daily summary</li>
+        <li>Monetization: Paid subscriptions</li>
+      </ul>
+    `;
+  }
+
+  document.getElementById("output").innerHTML = blueprint;
+</script>
 
 </body>
 </html>
